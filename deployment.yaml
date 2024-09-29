@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: postgres
+  namespace: postgres
 spec:
   replicas: 3
   selector:
@@ -19,7 +20,7 @@ spec:
           ports:
             - containerPort: 5432
           envFrom:
-            - configMapRef:
+            - secretRef:
                 name: postgres-secret
           volumeMounts:
             - mountPath: /var/lib/postgresql/data

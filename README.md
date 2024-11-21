@@ -8,7 +8,7 @@ Doppler service token needs to be seeded for external secrets operator by being 
 
 
 ```
-kubectl create secret generic doppler-token-postgres-deploy -n postgres --from-literal dopplerToken="dp.st...."
+kubectl create secret generic doppler-token-postgres-deploy -n external-secrets --from-literal dopplerToken="dp.st...."
 ```
 
 

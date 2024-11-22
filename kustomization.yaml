@@ -1,11 +1,11 @@
 resources:
-  - deployment.yaml
-  - secretStore.yaml
-  - externalSecret.yaml
-  - namespace.yaml
-  - pv.yaml
-  - pvc.yaml
-  - service.yaml
+ - namespace.yaml
+ - https://raw.githubusercontent.com/zalando/postgres-operator/master/charts/postgres-operator/crds/operatorconfigurations.yaml
+ - https://raw.githubusercontent.com/zalando/postgres-operator/master/charts/postgres-operator/crds/postgresqls.yaml
+ - https://raw.githubusercontent.com/zalando/postgres-operator/master/charts/postgres-operator/crds/postgresteams.yaml
 
-
+generators:
+  - pgOperatorHelm.yaml
+  - pgOperatorUIHelm.yaml
+  
 namespace: postgres

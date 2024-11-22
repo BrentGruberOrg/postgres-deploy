@@ -1,0 +1,10 @@
+# https://github.com/kubernetes-sigs/kustomize/issues/4593
+apiVersion: builtin
+kind: HelmChartInflationGenerator
+metadata:
+  name: postgres-operator-ui 
+name: postgres-operator-ui
+namespace: postgres
+releaseName: postgres-operator-ui
+repo: https://opensource.zalando.com/postgres-operator/charts/postgres-operator-ui
+valuesFile: pgOperatorUIValues.yaml
